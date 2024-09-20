@@ -1,0 +1,11 @@
+{% if obj %}
+<h1>Book created Successfully, Detail of book:</h1>
+<p>Title {{obj.title}}, ISBN:{{obj.isbn}},   Author:{{obj.author}}</p>
+{%endif%}
+
+<h1>Page to create new book</h1>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="CREATE">
+</form>

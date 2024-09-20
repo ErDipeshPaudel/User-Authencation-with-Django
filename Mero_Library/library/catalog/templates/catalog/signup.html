@@ -1,0 +1,9 @@
+<h1>This is the signup page to register new user!</h1>
+<form mehtod="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Signup">
+  <br>
+  <a href="{% url 'login' %}?next={{request.path}}">LOGIN!</a>
+
+</form>
